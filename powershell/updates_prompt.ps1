@@ -1,5 +1,5 @@
 ﻿# Check for updates and filter for those that need to be installed
-$updates = Get-WindowsUpdate -AcceptAll #| Where-Object { $_.UpdateType -eq 'Software' -and $_.InstallationResult -ne 'Installed' }
+$updates = Get-WindowsUpdate -AcceptAll 
 
 # Check if there are updates needed
 if ($updates.Count -gt 0) {
